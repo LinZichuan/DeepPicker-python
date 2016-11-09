@@ -244,12 +244,12 @@ Options for picking particles based on pre-trained model are:
  
  run the script `train.py`:
     
-    python autoPick.py --inputDir '/media/bioserver1/Data/paper_test/trpv1/test/' --pre_trained_model '../trained_model/model_demo_type2_molecule_A_B' --particle_size 180 --mrc_number 20 --outputDir '../autopick-trpv1-by-demo-molecule-A-B' --coordinate_symbol '_cnnPick' --threshold 0.5
+    python autoPick.py --inputDir './test_mrc/' --pre_trained_model './trained_model/model_demo_type3' --particle_size 180 --mrc_number 20 --outputDir './autopick-by-demo-network/' --coordinate_symbol '_cnnPick' --threshold 0.5
 
 
-When finished, the picked coordinate file will be saved in **'../autopick-trpv1-by-demo-molecule-A-B'**. The format of the coordinate file is Relion '.star'.
+When finished, the picked coordinate file will be saved in **'./autopick-by-demo-network'**. The format of the coordinate file is Relion '.star'.
 
-Besides, a binary file called **'../autopick-trpv1-by-demo-molecule-A-B/autopick_results.pickle'** is produced. It contains all the particles information. It will be used to do an iterative training or to estimate the precision and recall compared to the reference (e.g., those particles manually picked by experts).
+Besides, a binary file called **'../autopick-by-demo-network/autopick_results.pickle'** is produced. It contains all the particles information. It will be used to do an iterative training or to estimate the precision and recall compared to the reference (e.g., those particles manually picked by experts).
 
 ## 5. Comparing the picking results with reference
 The script `analysis_pick_results.py` is used to estimate the precision and recall based on the reference results (e.g., those particles manually picked by experts).
