@@ -1,3 +1,19 @@
+# CentOS 6.5 installation and picking command
+```bash
+yum install python-virtualenv
+virtualenv pickerenv
+source pickerenv/bin/activate
+
+#download .whl file from https://1drv.ms/u/s!AhizKPUjtYL9gwLLJu_sPELflQ0o
+pip install tensorflow-0.10.0-cp27-none-linux_x86_64.whl
+pip install spicy
+pip install image
+pip install matplotlib
+
+#put the mic photo into test_mrc/
+python autoPick.py --inputDir './test_mrc' --pre_trained_model './trained_model/model_demo_type3' --particle_size 320 --mrc_number 1 --outputDir './autopick-spliceosome-by-demo-molecule-A-B' --coordinate_symbol '_cnnPick' --threshold 0.5
+```
+
 # DeepPicker
 
 For more details about 'DeepPicker', please refer to the paper [DeepPicker](https://arxiv.org/abs/1605.01838). 
