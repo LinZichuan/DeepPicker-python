@@ -6,12 +6,11 @@ source pickerenv/bin/activate
 
 #download .whl file from https://1drv.ms/u/s!AhizKPUjtYL9gwLLJu_sPELflQ0o
 pip install tensorflow-0.10.0-cp27-none-linux_x86_64.whl
-pip install spicy
-pip install image
-pip install matplotlib
+pip install spicy image matplotlib
 
-#put the mic photo into test_mrc/
-python autoPick.py --inputDir './test_mrc' --pre_trained_model './trained_model/model_demo_type3' --particle_size 320 --mrc_number 1 --outputDir './autopick-spliceosome-by-demo-molecule-A-B' --coordinate_symbol '_cnnPick' --threshold 0.5
+#put the mrc photo into test_mrc/
+cd DeepPicker-python/
+python autoPick.py --inputDir <path to the test_mrc> --pre_trained_model './trained_model/model_demo_type3' --particle_size <your particle size> --mrc_number <the number of mrc graph that you want to pick> --outputDir './autopick-by-demo/' --coordinate_symbol '_cnnPick' --threshold 0.5
 ```
 
 # DeepPicker
